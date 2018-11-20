@@ -12,6 +12,7 @@ private:
 
 public:
     Objects();
+    void findUse(int itemID);
 
 };
 

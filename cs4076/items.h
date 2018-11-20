@@ -7,7 +7,7 @@
 class Items
 {
 
-private:
+protected:
     QString description;
     int id;
 
