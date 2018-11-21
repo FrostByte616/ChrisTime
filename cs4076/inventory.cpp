@@ -1,5 +1,6 @@
 #include "inventory.h"
 #include "items.h"
+#include "room.h"
 
 
 Inventory::Inventory()
@@ -27,6 +28,14 @@ void Inventory::addItem(Items item)
     }
 }
 
+/*void Inventory::addToInv(const QString &item)
+{
+    Items temp;
+    for (int i=0; i< Room::getCurrentRoom()::getNumberOfItemsInRoom(); i++)
+
+    addItem(temp);
+}
+*/
 void Inventory::removeItem(int id)
 {
     bool removed = false;
@@ -53,3 +62,4 @@ void Inventory::removeItem(int id)
         }
     }
 }
+

@@ -5,6 +5,11 @@ Items::Items()
 
 }
 
+Items::~Items()
+{
+
+}
+
 Items::Items(QString description, int id)
 {
     this->description = description;

@@ -30,14 +30,16 @@ SOURCES += \
     items.cpp \
     objects.cpp \
     room.cpp \
-    inventory.cpp
+    inventory.cpp \
+    initgame.cpp
 
 HEADERS += \
         mainwindow.h \
     items.h \
     objects.h \
     room.h \
-    inventory.h
+    inventory.h \
+    initgame.h
 
 FORMS += \
         mainwindow.ui

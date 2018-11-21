@@ -23,7 +23,9 @@ public:
     Room* nextRoom(string direction);
     void addItem(Items *inItem);
     int isItemInRoom(string inString);
-    void removeItemFromRoom(int location);
+    void removeItemFromRoom(int id);
+    int getNumberOfItemsInRoom();
+    QString getCurrentRoom();
 
 };
 

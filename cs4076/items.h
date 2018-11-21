@@ -13,6 +13,7 @@ protected:
 
 public:
     Items();
+    ~Items();
     Items(QString description, int id);
     QString getDesc();
     int getID();
