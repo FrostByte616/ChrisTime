@@ -2,6 +2,7 @@
 #define ROOM_H
 
 #include "items.h"
+#include "objects.h"
 #include <QString>
 #include <map>
 #include <vector>
@@ -14,6 +15,7 @@ private:
     QString description;
     map<QString, Room*> exits;
     vector <Items> itemsInRoom;
+    vector <Objects> objsInRoom;
     QString exitString();
 
 public:
@@ -21,7 +23,8 @@ public:
     Room(QString description);
     void setExits(Room *north, Room *east, Room *south, Room *west);
     Room* nextRoom(string direction);
-    void addItem(Items *inItem);
+    void addItems(Items *inItem);
+    void addObjects(Objects *inObj);
     int isItemInRoom(string inString);
     void removeItemFromRoom(int id);
     int getNumberOfItemsInRoom();

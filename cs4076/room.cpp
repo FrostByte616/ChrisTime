@@ -31,6 +31,16 @@ QString Room::exitString()
     return returnString;
 }
 
+void Room::addItems(Items *inItem)
+{
+    itemsInRoom.push_back(*inItem);
+}
+
+void Room::addObjects(Objects *inObj)
+{
+    objsInRoom.push_back(*inObj);
+}
+
 int Room::getNumberOfItemsInRoom()
 {
     return Room::itemsInRoom.size();
@@ -39,10 +49,6 @@ int Room::getNumberOfItemsInRoom()
 QString Room::getCurrentRoom()
 {
     return description;
-}
-void Room::addItem(Items *inItem)
-{
-    itemsInRoom.push_back(*inItem);
 }
 
 void Room::removeItemFromRoom(int id)

@@ -5,6 +5,12 @@ Objects::Objects()
 
 }
 
+Objects::Objects(QString description, int id)
+{
+    this->description = description;
+    this->id = id;
+}
+
 void Objects::findUse(int itemID)
 {
     if(itemID == id)

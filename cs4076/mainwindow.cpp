@@ -17,5 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_item_comboBox_currentIndexChanged(const QString &item)
 {
-    Inventory inv.addToInv(&item);
+    Inventory inv;
+    inv.addToInv(item);
 }

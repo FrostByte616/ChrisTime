@@ -5,12 +5,11 @@
 
 Inventory::Inventory()
 {
-    Items inventory [20];
     for(int i = 0; i < 20; i++)
         inventory[i] = Items("Empty", 0);
 }
 
-void Inventory::addItem(Items item)
+void Inventory::addItem(Items *item)
 {
     bool added = false;
 
@@ -20,7 +19,7 @@ void Inventory::addItem(Items item)
         {
             if(inventory[i].getID()==0)
             {
-                inventory[i]=item;
+                inventory[i]=*item;
                 added = true;
                 break;
             }

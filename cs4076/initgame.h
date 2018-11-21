@@ -12,10 +12,11 @@ class InitGame
 {
 public:
     InitGame();
+    void start();
+    void createRooms();
+    Inventory inv;
 
 private:
-    void createRooms();
-    void start();
     Room *currentRoom;
 };
 

@@ -12,6 +12,7 @@ private:
 
 public:
     Objects();
+    Objects(QString, int);
     void findUse(int itemID);
 
 };

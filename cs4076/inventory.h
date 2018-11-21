@@ -11,7 +11,7 @@ private:
 public:
     friend class mainwindow;
     Inventory();
-    void addItem(Items item);
+    void addItem(Items *item);
     void removeItem(int id);
     void operator = (const Items &Items);
     void addToInv(const QString &item);

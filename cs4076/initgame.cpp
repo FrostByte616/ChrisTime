@@ -10,12 +10,13 @@ void InitGame::createRooms()
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
 
         a = new Room("a");
-            a->addItem(new Items("x", 1));
-            a->addItem(new Items("y", 2));
+            a->addItems(new Items("x", 1));
+            a->addItems(new Items("y", 2));
         b = new Room("b");
-            b->addItem(new Items("xx", 3));
-            b->addItem(new Items("yy", 4));
+            b->addItems(new Items("xx", 3));
+            b->addItems(new Items("Iron Key", 4));
         c = new Room("c");
+            c->addObjects(new Objects("Door", 4));
         d = new Room("d");
         e = new Room("e");
         f = new Room("f");
@@ -43,4 +44,5 @@ void InitGame::start()
 {
     createRooms();
     Inventory inv;
+    inv.addItem(new Items("Welcome", 20));
 }
