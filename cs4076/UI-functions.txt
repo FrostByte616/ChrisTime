@@ -1,0 +1,35 @@
+/*image map popup
+#include <QPixmap>
+#include "mapUI.h"
+
+//under ui->setupUI(this);
+QPixmap picture("chrisMap.png");
+int w = ui->label_picture->width();
+int h = ui->label_picture->height();
+ui->label_picture->setPixmap(picture.scaled(w, h, Qt::KeepAspectRatio));
+
+//in slot for call button
+popupMap = new mapUI(this);
+popupMap->show();
+
+*/
+
+/* setting central text
+set to a default at start through gui designer
+update on:
+	new room
+	item used
+	result of object used
+*/
+
+/* win condition
+make in ui, call from switch case
+
+#include "winUI.h"
+
+winPopUp = new winUI(this);
+winPopUp->show;
+
+//in slot for button in winPopUp
+end/exit all ui's
+*/
