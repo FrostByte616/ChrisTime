@@ -25,13 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
         mainwindow.cpp \
     items.cpp \
     objects.cpp \
     room.cpp \
     inventory.cpp \
-    initgame.cpp
+    initgame.cpp \
+    mapUI.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,10 +39,12 @@ HEADERS += \
     objects.h \
     room.h \
     inventory.h \
-    initgame.h
+    initgame.h \
+    mapUI.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    mapUI.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

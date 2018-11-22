@@ -5,6 +5,17 @@ InitGame::InitGame()
     start();
 }
 
+
+int main(int argc, char *argv[])
+{
+    InitGame game;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+
+    return a.exec();
+}
+
 void InitGame::createRooms()
 {
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
@@ -46,3 +57,14 @@ void InitGame::start()
     Inventory inv;
     inv.addItem(new Items("Welcome", 20));
 }
+
+void InitGame::go(QString direction)
+{
+
+    Room* nextRoom = currentRoom->nextRoom(direction);
+    {
+        currentRoom = nextRoom;
+    }
+}
+
+

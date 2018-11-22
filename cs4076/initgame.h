@@ -6,6 +6,7 @@
 #include "items.h"
 #include "objects.h"
 #include "room.h"
+#include <QApplication>
 
 
 class InitGame
@@ -13,11 +14,13 @@ class InitGame
 public:
     InitGame();
     void start();
-    void createRooms();
+    void static createRooms();
     Inventory inv;
+    Room static *currentRoom;
+    void static go(QString direction);
 
 private:
-    Room *currentRoom;
+
 };
 
 #endif // INITGAME_H

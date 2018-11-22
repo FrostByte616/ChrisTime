@@ -13,13 +13,17 @@ Objects::Objects(QString description, int id)
 
 void Objects::findUse(int itemID)
 {
-    if(itemID == id)
+    if(itemID == id && used == false)
     {
         switch(itemID)
         {
             case 1 : id = 0; break;
             case 2 : id = 0; break;
         }
+    }
+    else if(itemID == id && used == true)
+    {
+
     }
     else
     {

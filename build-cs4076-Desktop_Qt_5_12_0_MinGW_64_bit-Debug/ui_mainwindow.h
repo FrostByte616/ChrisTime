@@ -34,7 +34,7 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QLabel *label;
-    QComboBox *exit_comboBox;
+    QComboBox *comboBox;
     QPlainTextEdit *plainTextEdit;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
@@ -81,10 +81,10 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
-        exit_comboBox = new QComboBox(gridLayoutWidget);
-        exit_comboBox->setObjectName(QString::fromUtf8("exit_comboBox"));
+        comboBox = new QComboBox(gridLayoutWidget);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
-        gridLayout->addWidget(exit_comboBox, 1, 0, 1, 1);
+        gridLayout->addWidget(comboBox, 1, 0, 1, 1);
 
         plainTextEdit = new QPlainTextEdit(centralWidget);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));

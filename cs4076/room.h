@@ -4,9 +4,12 @@
 #include "items.h"
 #include "objects.h"
 #include <QString>
+#include <string>
 #include <map>
 #include <vector>
+#include <iostream>
 using namespace std;
+using std::vector;
 
 
 class Room
@@ -16,19 +19,22 @@ private:
     map<QString, Room*> exits;
     vector <Items> itemsInRoom;
     vector <Objects> objsInRoom;
-    QString exitString();
 
 public:
     Room();
     Room(QString description);
     void setExits(Room *north, Room *east, Room *south, Room *west);
-    Room* nextRoom(string direction);
+    Room* nextRoom(QString direction);
     void addItems(Items *inItem);
     void addObjects(Objects *inObj);
-    int isItemInRoom(string inString);
+    //int isItemInRoom(string inString);
     void removeItemFromRoom(int id);
     int getNumberOfItemsInRoom();
-    QString getCurrentRoom();
+    QString static getCurrentRoom();
+    Items getItemFromRoom(QString);
+    Objects getObjectFromRoom(QString);
+    QString exitString();
+
 
 };
 
