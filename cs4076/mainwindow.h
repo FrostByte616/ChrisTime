@@ -31,6 +31,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_locationLabel_linkActivated(const QString &link);
+
 private:
     Ui::MainWindow *ui;
     void exitStringToBox();

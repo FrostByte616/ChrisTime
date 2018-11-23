@@ -45,7 +45,7 @@ public:
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_5;
-    QLabel *label_4;
+    QLabel *locationLabel;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -134,11 +134,11 @@ public:
 
         horizontalLayout_2->addWidget(label_5);
 
-        label_4 = new QLabel(horizontalLayoutWidget_2);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setAlignment(Qt::AlignCenter);
+        locationLabel = new QLabel(horizontalLayoutWidget_2);
+        locationLabel->setObjectName(QString::fromUtf8("locationLabel"));
+        locationLabel->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_4);
+        horizontalLayout_2->addWidget(locationLabel);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -166,7 +166,7 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "Items", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Objects", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Location:", nullptr));
-        label_4->setText(QApplication::translate("MainWindow", "A", nullptr));
+        locationLabel->setText(QApplication::translate("MainWindow", "A", nullptr));
     } // retranslateUi
 
 };

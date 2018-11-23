@@ -1,0 +1,10 @@
+release/mainwindow.o
+release/items.o
+release/objects.o
+release/room.o
+release/inventory.o
+release/initgame.o
+release/popupm.o
+release/moc_mainwindow.o
+release/moc_mapUI.o
+release/moc_popupm.o

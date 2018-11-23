@@ -12,9 +12,10 @@ Room::Room()
 
 }
 
-Room::Room(QString description)
+Room::Room(QString description, bool locked)
 {
     this->description = description;
+    this->locked = locked;
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west)
@@ -97,5 +98,15 @@ Objects Room::getObjectFromRoom(QString desc)
             return objsInRoom.at(i);
         }
     }
+}
+
+void Room::unlock()
+{
+    locked = false;
+}
+
+QString Room::getCurrentRoomNS()
+{
+    return description;
 }
 

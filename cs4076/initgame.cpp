@@ -20,21 +20,21 @@ void InitGame::createRooms()
 {
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
 
-        a = new Room("a");
-            a->addItems(new Items("x", 1));
+        a = new Room("a", false);
+            a->addItems(new Items("Iron Key", 1));
             a->addItems(new Items("y", 2));
-        b = new Room("b");
+        b = new Room("b", true);
             b->addItems(new Items("xx", 3));
             b->addItems(new Items("Iron Key", 4));
-        c = new Room("c");
+        c = new Room("c", false);
             c->addObjects(new Objects("Door", 4));
-        d = new Room("d");
-        e = new Room("e");
-        f = new Room("f");
-        g = new Room("g");
-        h = new Room("h");
-        i = new Room("i");
-        j = new Room("Chris Room");
+        d = new Room("d", false);
+        e = new Room("e", true);
+        f = new Room("f", false);
+        g = new Room("g", true);
+        h = new Room("h", false);
+        i = new Room("i", true);
+        j = new Room("Chris Room", true);
 
     //             (N, E, S, W)
         a->setExits(f, b, d, c);
@@ -60,7 +60,6 @@ void InitGame::start()
 
 void InitGame::go(QString direction)
 {
-
     Room* nextRoom = currentRoom->nextRoom(direction);
     {
         currentRoom = nextRoom;

@@ -31,7 +31,7 @@ SOURCES += \
     room.cpp \
     inventory.cpp \
     initgame.cpp \
-    mapUI.cpp
+    popupm.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,11 +40,12 @@ HEADERS += \
     room.h \
     inventory.h \
     initgame.h \
-    mapUI.h
+    mapUI.h \
+    popupm.h
 
 FORMS += \
         mainwindow.ui \
-    mapUI.ui
+    popupm.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

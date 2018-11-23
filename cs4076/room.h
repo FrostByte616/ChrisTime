@@ -15,14 +15,16 @@ using std::vector;
 class Room
 {
 private:
-    QString description;
+    QString static description;
     map<QString, Room*> exits;
     vector <Items> itemsInRoom;
     vector <Objects> objsInRoom;
+    bool locked;
 
 public:
     Room();
-    Room(QString description);
+    Room(QString description, bool locked);
+    void unlock();
     void setExits(Room *north, Room *east, Room *south, Room *west);
     Room* nextRoom(QString direction);
     void addItems(Items *inItem);
@@ -31,6 +33,7 @@ public:
     void removeItemFromRoom(int id);
     int getNumberOfItemsInRoom();
     QString static getCurrentRoom();
+    QString getCurrentRoomNS();
     Items getItemFromRoom(QString);
     Objects getObjectFromRoom(QString);
     QString exitString();

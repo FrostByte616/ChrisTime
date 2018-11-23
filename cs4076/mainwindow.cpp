@@ -7,7 +7,8 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "mapUI.h"
+#include <QPixmap>
+#include "popupm.h"
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -16,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     exitStringToBox();
+
 }
 
 void MainWindow::exitStringToBox()
@@ -39,11 +41,13 @@ void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
 {
     InitGame::go(*&arg1);
     exitStringToBox();
-    ui->label_4->setText(Room::getCurrentRoom());
+    ui->locationLabel->setText(Room::getCurrentRoom());
 }
 
 
 void MainWindow::on_pushButton_clicked()
 {
-    //popup map ui
+    popupM popupMap;
+    popupMap.setModal(true);
+    popupMap.exec();
 }
